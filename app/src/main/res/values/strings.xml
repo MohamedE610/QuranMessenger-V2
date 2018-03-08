@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">الفرقان</string>
+
+    <!-- Preferences -->
+    <string name="serviceEnabledKey">serviceEnabledKey</string>
+    <string name="title">Head service enabled</string>
+    <string name="summary">It allows to enable or disable the head service.</string>
+
+    <!-- Notification -->
+    <string name="notificationTitle">Head service</string>
+    <string name="notificationText">Tap to configure.</string>
+    <string name="alarm_time">وقت التنبيه</string>
+    <string name="alarm_time_summary">قم بتحديد وقت التنبيه</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="r_Ayah">﴿</string>
+    <string name="l_Ayah">﴾</string>
+    <string name="r_Surah">﴿﴿﴿﴿</string>
+    <string name="l_Surah">﴾﴾﴾﴾</string>
+    <string name="bsm_allah">﻿بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_prayer_times">PrayerTimesActivity</string>
+    <string name="fahrs">الفهرس</string>
+    <string name="settings_ar">الاعدادات</string>
+    <string name="prayer_times">اوقات الصلاه</string>
+    <string name="title_activity_tafser">TafserActivity</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="title_activity_azkar">AzkarActivity</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="title_activity_azkar_detailed">AzkarDetailedActivity</string>
+    <string name="shared_pref_file_name">extraSetting</string>
+    <string name="text_favorites">Favorites</string>
+    <string name="text_schedules">Schedules</string>
+    <string name="text_music">Music</string>
+    <string name="quran">قران</string>
+    <string name="back">الانتقال الي</string>
+    <string name="azkar">أذكار الصباح والمساء</string>
+    <string name="setting">الإعدادات</string>
+    <string name="title_activity_navegation_drawer">Navegation_drawer</string>
+    <string name="alforqan">الفرقان</string>
+    <string name="azan">مواقيت الصلاة</string>
+    <string name="about">معلومات عنا</string>
+    <string name="support">الدعم الفني</string>
+    <string name="facebook">facebook</string>
+    <string name="insta">Instagram</string>
+    <string name="astma3">استماع</string>
+    <string name="tafser">تفسير</string>
+    <string name="save">حفظ علامة</string>
+
+</resources>

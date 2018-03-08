@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.DepartmentsActivity"
+    android:fitsSystemWindows="true"
+    android:id="@+id/drawer_layout2"
+    tools:openDrawer="start"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!--<android.support.design.widget.AppBarLayout-->
+        <!--android:id="@+id/custom_bar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:theme="@style/AppTheme.AppBarOverlay">-->
+
+        <!--<android.support.v7.widget.Toolbar-->
+            <!--android:id="@+id/toolbar23"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="?attr/actionBarSize"-->
+            <!--android:background="@drawable/bar"-->
+            <!--app:popupTheme="@style/AppTheme.PopupOverlay" />-->
+
+    <!--</android.support.design.widget.AppBarLayout>-->
+
+    <include
+        layout="@layout/department_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></include>
+
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_navegation_drawer"
+        app:menu="@menu/activity_main2_drawer"
+        android:background="@drawable/nav_bg"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="@color/white"
+        />
+
+
+</android.support.v4.widget.DrawerLayout>

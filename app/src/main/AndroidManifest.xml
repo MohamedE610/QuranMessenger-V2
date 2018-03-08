@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:androids="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.e610.quranmessenger">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:allowBackup="true"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Activities.SettingsActivity"
+            android:launchMode="singleTop">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.Main2Activity" />
+        </activity>
+        <activity
+            android:name=".Activities.MainActivity"
+            android:launchMode="singleTop">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.e610.quranmessenger.Activities.MainActivity" />
+        </activity>
+
+        <!-- android:keepScreenOn="true" -->
+        <activity
+            android:name=".Activities.Main2Activity"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".Activities.DepartmentsActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.e610.quranmessenger.Activities.DepartmentsActivity" />
+        </activity>
+
+        <service android:name=".Services.HeadService" />
+        <service android:name=".Services.AzkarService" />
+        <service android:name=".Services.AzanService" />
+        <service
+            android:name=".Services.MediaPlayerService"
+            android:stopWithTask="false" />
+
+        <receiver android:name=".Services.MediaPlayerService$MediaReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".BroadcastRecievers.NotificationDismissedReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="notification_cancelled" />
+            </intent-filter>
+        </receiver>
+
+        <!--
+        <receiver android:name=".Services.WidgetHelper">
+            <intent-filter>
+            </intent-filter>
+        </receiver>
+        -->
+
+        <activity
+            android:name=".Activities.FahrsActivity"
+            android:label="الفهرس"
+            android:launchMode="singleTop">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.DepartmentsActivity" />
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.PrayerTimesActivity"
+            android:label="الاذان"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.Main2Activity" />
+        </activity>
+        <activity
+            android:name=".Activities.SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.TafserActivity"
+            android:label="التفسير"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.Main2Activity" />
+        </activity>
+
+        <activity
+            android:name=".Activities.AzkarActivity"
+            android:label="أذكار الصباح و المساء"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.DepartmentsActivity" />
+        </activity>
+        <activity
+            android:name=".Activities.AzkarDetailedActivity"
+            android:label="الاذكار"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.AzkarActivity" />
+        </activity>
+        <activity android:name=".Activities.OtherSettingsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.SettingsActivity" />
+        </activity>
+
+        <receiver android:name=".BroadcastRecievers.BootCompleteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".BroadcastRecievers.PhonecallReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
+        <!--
+        <receiver android:name=".Utils.PhonecallReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
+        -->
+
+        <receiver android:name=".BroadcastRecievers.AlarmBroadcastReciever">
+            <intent-filter>
+                <action android:name="azkar_b" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".forcanWork.Navegation_drawer"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+        <activity android:name=".Activities.DepartmentsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+    </application>
+
+</manifest>

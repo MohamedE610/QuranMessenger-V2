@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="shekhNames">
+        <item>ماهر المعيقلي</item>
+        <item>العجمي</item>
+        <item>فارس عباد</item>
+        <item>سعود الشريم</item>
+        <item>محمود خليل الحصري</item>
+        <item>مشاري راشد العفاسي</item>
+    </string-array>
+
+    <string-array name="shekhNamesValues">
+        <item>mueaqly</item>
+        <item>ajami</item>
+        <item>fares</item>
+        <item>shurim</item>
+        <item>hosary</item>
+        <item>afasi</item>
+    </string-array>
+
+
+    <string-array name="azan_voice">
+        <item>الصوت الاول</item>
+        <item>الصوت الثانى</item>
+    </string-array>
+
+    <string-array name="azan_voice_values">
+        <item>azan0</item>
+        <item>azan1</item>
+    </string-array>
+
+</resources>
